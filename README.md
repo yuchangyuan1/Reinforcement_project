@@ -11,8 +11,8 @@
 - **IQL**: Main offline RL policy for ranking movies; uses expectile value regression and AWR policy updates.
 - **CQL**: Conservative variant to reduce overestimation; parallel training/eval scripts mirror IQL.
 - **BC**: Optional warm start for policy initialization.
-- **CRR (TBC)**: Networks defined and a draft trainer script provided; more tuning to come.
-- **LinUCB (TBC)**: Contextual bandit baseline to be added for fast online-style comparisons.
+- **CRR**: Networks defined and a draft trainer script provided; more tuning to come.
+- **LinUCB**: Contextual bandit baseline to be added for fast online-style comparisons.
 
 ## Quickstart
 ```bash
@@ -51,8 +51,8 @@ Hydra configs in `configs/default.yaml` can be enabled by installing `hydra-core
 - **Rewards**: Normalized movie ratings; configurable scaling for positive/negative balance.
 - **IQL training**: Expectile value loss, TD Q-loss, and advantage-weighted regression with weight clipping; BC or SASRec weights can initialize the policy.
 - **CQL training**: Adds conservative penalties to keep Q-values close to behavior support.
-- **CRR (in progress)**: Advantage-weighted critic with future integration into the training loop.
-- **LinUCB (planned)**: Lightweight contextual bandit baseline leveraging the same static + sequence context.
+- **CRR**: Advantage-weighted critic with future integration into the training loop.
+- **LinUCB**: Lightweight contextual bandit baseline leveraging the same static + sequence context.
 
 ## Evaluation
 - NX_0 self-normalized importance sampling implemented in `src/evaluation/nx0_evaluator.py`.
